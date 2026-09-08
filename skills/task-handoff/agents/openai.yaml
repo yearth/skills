@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务交接"
+  short_description: "选择最轻的续作方式，整理准确的交接上下文"
+  default_prompt: "使用 $task-handoff，为当前任务准备最轻且可靠的续作交接。"
