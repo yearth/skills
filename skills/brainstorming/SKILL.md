@@ -1,37 +1,37 @@
 ---
 name: brainstorming
-description: "Explore ideas, clarify ambiguous requirements, and compare design approaches before implementation when meaningful choices remain. Use for brainstorming requests and features with unresolved design trade-offs; clear small changes, bug fixes, and execution of an agreed plan do not require this workflow."
+description: "在实施前仍有重要选择需要讨论时，探索想法、澄清模糊需求并比较设计方案。适用于头脑风暴请求，以及尚有设计取舍未确定的功能；明确的小改、修 bug 和执行已商定方案无需进入此流程。"
 ---
 
-# Brainstorming Ideas Into Designs
+# 通过头脑风暴形成设计
 
-Help the user turn an idea into a clear, practical direction through natural dialogue. Scale discussion to the uncertainty and consequences of the decisions, not a fixed task category.
+通过自然对话，帮助用户把想法变成清晰、可行的方向。讨论深度取决于不确定性和决策影响，不按固定任务类别决定。
 
-## Understand and Explore
+## 理解与探索
 
-- Establish the goal, relevant constraints, and what success means. For existing projects, inspect enough context to ground the discussion in the actual system and its conventions.
-- Ask only questions whose answers could materially change the approach. Prioritize the most consequential uncertainty; closely related questions may be grouped. When an assumption is reasonable and reversible, state it and continue.
-- Compare alternatives when there are real trade-offs. Recommend an approach and explain why; do not manufacture options to meet a quota.
-- Keep the scope focused. Break up an oversized idea when that helps make progress, without requiring a separate formal process for every piece.
-- Adjust the depth as evidence arrives. A complex-looking request may become simple after inspection; a newly discovered risk may need more discussion.
+- 明确目标、相关约束和成功标准。对于现有项目，查看足够的上下文，让讨论基于实际系统及其约定。
+- 只问答案会实质影响方案的问题。优先解决影响最大的不确定性；紧密相关的问题可以一起问。对于合理且可逆的假设，说明后继续推进。
+- 存在真实取舍时再比较替代方案。给出推荐并说明理由，不为凑数量而制造选项。
+- 保持范围聚焦。想法过大时，按有助于推进的方式拆分，无需为每一部分单独套用正式流程。
+- 根据新证据调整讨论深度。看起来复杂的请求，调查后可能很简单；新发现的风险也可能需要进一步讨论。
 
-## Reach a Useful Decision
+## 形成有用的决策
 
-Summarize the intended outcome, recommended approach, scope, and any unresolved decisions at the level of detail the user needs. Include interfaces, data flow, failure handling, or validation only when they help assess the design.
+按用户需要的详细程度，总结预期结果、推荐方案、范围和未决选择。接口、数据流、失败处理和验证方式，仅在有助于评估设计时展开。
 
-Use the conversation as the default output. Create a design document only when the user requests one; there is no required spec, fixed document path, automatic commit, or separate document review gate.
+默认在对话中形成结论。只有用户要求时才创建设计文档；不强制生成 spec、使用固定文档路径、自动提交 Git，或增加独立的文档审核环节。
 
-Follow the user's existing authorization and applicable project approval rules. Do not ask for approval again merely because brainstorming was used. Pause when a consequential choice needs the user's decision, the scope would exceed their authorization, or an applicable rule requires approval.
+沿用用户已有授权和适用的项目审批规则。不要仅因使用了头脑风暴就重复请求批准。重要选择需要用户决定、范围将超出授权，或适用规则要求批准时，再暂停等待。
 
-If the user requested discussion only, finish with the conclusion and remaining questions. If implementation is already authorized and the important decisions are resolved, continue through the normal development workflow. Interest in an idea alone does not authorize implementation.
+如果用户只要求讨论，就以结论和剩余问题结束。如果实施已经获得授权，且重要决策已明确，就继续正常开发流程。用户对想法感兴趣，本身不构成实施授权。
 
-## Visual Companion
+## 视觉伴侣
 
-Keep the browser-based visual companion available for mockups, wireframes, layout comparisons, diagrams, and other questions that are easier to understand visually.
+保留基于浏览器的视觉伴侣，用于效果稿、线框图、布局比较、示意图，以及其他通过视觉展示更容易理解的问题。
 
-- Offer it when a concrete visual question arises, rather than automatically at the start of every discussion. Briefly explain what you would show and obtain consent before first use, unless the user has already requested or approved it.
-- The offer can accompany relevant context; it does not need a separate message. After acceptance, use it when helpful without repeatedly asking to enable it.
-- Read [visual-companion.md](visual-companion.md) before starting the companion. Resolve its script paths relative to this skill directory. Follow its operational instructions for starting the server, showing screens, reading events, and stopping the session, while respecting the environment's browser routing rules.
-- The guide's conversational ceremony is optional: use the lightweight dialogue rules here instead of mandatory per-screen turn endings, repeated URL reminders, or approval after every section. Ask for feedback when an actual visual decision requires it.
-- Choose visual or text presentation per question. Enabling the companion does not move all discussion into the browser.
-- Use browser selections together with the user's messages. Resolve conflicting or ambiguous feedback before treating a visual choice as settled; visual selection does not grant unrelated implementation authorization.
+- 出现具体的视觉问题时再提出使用，不在每次讨论开始时自动邀请。简要说明准备展示什么，首次使用前征得同意；用户已明确要求或批准时，无需再问。
+- 邀请可以和相关上下文一起表达，无需独占一条消息。用户接受后，按需使用，不反复询问是否启用。
+- 启动前阅读 [视觉伴侣指南](visual-companion.md)。其中的脚本路径以本 Skill 目录为基准解析。遵循指南中启动服务、展示页面、读取事件和结束会话的操作说明，同时遵守当前环境的浏览器路由规则。
+- 指南中的对话形式要求是可选的：以这里的轻量对话规则为准，无需每展示一屏就结束当前轮次、反复提醒 URL，或逐节请求批准。实际视觉选择需要用户决定时，再征求反馈。
+- 每个问题分别判断使用视觉还是文字表达。启用视觉伴侣不代表所有讨论都要移入浏览器。
+- 结合浏览器选择和用户消息理解反馈。反馈冲突或含糊时，先澄清再认定视觉方案已确定；视觉选择不构成对无关实施工作的授权。

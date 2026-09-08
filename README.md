@@ -7,13 +7,13 @@
 需要 Git、Node.js/npm，以及目标 Agent。新电脑安装到 Codex：
 
 ```bash
-npx --yes skills@latest add yearth/skills -g -a codex --skill brainstorming -y
+npx --yes skills@latest add yearth/skills -g -a codex --skill brainstorming minimal-change -y
 ```
 
 安装到多个 Agent：
 
 ```bash
-npx --yes skills@latest add yearth/skills -g -a codex claude-code pi --skill brainstorming -y
+npx --yes skills@latest add yearth/skills -g -a codex claude-code pi --skill brainstorming minimal-change -y
 ```
 
 先查看可安装内容：
@@ -27,7 +27,7 @@ npx --yes skills@latest add yearth/skills --list
 ## 更新
 
 ```bash
-npx --yes skills@latest update brainstorming -g -y
+npx --yes skills@latest update brainstorming minimal-change -g -y
 ```
 
 更新从本仓库获取版本，不会把本机修改自动上传到 GitHub。希望跨电脑复用的调整，应先提交到本仓库，再在其他电脑更新。
@@ -37,6 +37,7 @@ npx --yes skills@latest update brainstorming -g -y
 | Skill | 用途 |
 | --- | --- |
 | [brainstorming](skills/brainstorming/SKILL.md) | 澄清模糊需求、比较设计方案；按不确定性控制讨论深度，保留浏览器视觉伴侣。 |
+| [minimal-change](skills/minimal-change/SKILL.md) | 完整解决任务，控制行为影响范围，避免无关扩张和为缩小 diff 而漏修。 |
 
 brainstorming 不强制 spec、自动 commit 或重复审批。视觉伴侣包含完整指南、服务脚本及页面资源，需要 Node.js 和 Bash；Windows 请使用 Git Bash 或 WSL。首次使用视觉伴侣时由 Agent 按指南启动。本仓库发布不代表对所有操作系统、Agent 或视觉效果都已验证。
 

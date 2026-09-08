@@ -1,0 +1,4 @@
+interface:
+  display_name: "Minimal Change"
+  short_description: "Complete scoped changes with limited behavioral impact"
+  default_prompt: "Use $minimal-change to complete this task with focused changes and appropriate verification."
