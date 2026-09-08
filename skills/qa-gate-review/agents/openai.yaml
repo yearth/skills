@@ -1,0 +1,4 @@
+interface:
+  display_name: "完成验收"
+  short_description: "按风险核验任务结果，区分新增发现与复验，并保留 UI 截图供人工审核"
+  default_prompt: "使用 $qa-gate-review 对照已约定目标核验本次任务，指出证据缺口，并保留 UI 截图供人工审核。"
